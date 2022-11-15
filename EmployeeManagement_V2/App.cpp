@@ -13,6 +13,7 @@ enum {
     ADD,
     VIEW,
     SEARCH,
+    SORT,
     EDIT,
     DELETE,
     SAVE,
@@ -33,7 +34,6 @@ public:
         char op;
         int ch;
         int id;
-        Employee employee;
         EmployeeService employeeservice;
         SalariedEmployee sEmployee;
         HourlyEmployee hEmployee;
@@ -75,6 +75,9 @@ public:
                 cin >> id;
                 employeeservice.searchEmployee(id);
                 break;
+            case SORT:
+                employeeservice.sortEmployee();
+                break;
             case EDIT:
                 cout << "Enter Employee ID to Edit: ";
                 cin >> id;
@@ -84,7 +87,6 @@ public:
                 cout << "Enter Employee ID to delete: ";
                 cin >> id;
                 employeeservice.deleteEmployee(id);
-                cout << "Employee has been deleted*" << endl;
                 break;
             case SAVE:
                 employeeservice.saveEmployeeToFile();
@@ -92,6 +94,7 @@ public:
                 break;
             case LOAD:
                 employeeservice.loadEmployeeFromFile();
+                cout << "Data has been loaded" << endl;
                 break;
             case EXIT:
                 exit(1);
@@ -108,12 +111,13 @@ public:
         cout << "1. Add Employee\n";
         cout << "2. Display All Employee\n";
         cout << "3. Search Employee\n";
-        cout << "4. Edit Employee\n";
-        cout << "5. Delete Employee\n";
-        cout << "6. Save Employee Data\n";
-        cout << "7. Load Employee Data\n";
+        cout << "4. Sort Employee\n";
+        cout << "5. Edit Employee\n";
+        cout << "6. Delete Employee\n";
+        cout << "7. Save Employee Data\n";
+        cout << "8. Load Employee Data\n";
         cout << "0. Exit from Program\n";
-        cout << "Enter (0-7): ";
+        cout << "Enter (0-8): ";
     }
     void addMenu() {
         cout << "======Add Employee=====\n";

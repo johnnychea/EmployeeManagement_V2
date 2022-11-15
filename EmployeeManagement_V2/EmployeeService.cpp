@@ -55,7 +55,7 @@ public:
             }
         }
         else {
-            cout << "NO DATA!!" << endl;
+            cout << "NOT FOUND!!" << endl;
         }
         
     }
@@ -115,7 +115,7 @@ public:
             }
         }
         else {
-            cout << "NO DATA!!" << endl;
+            cout << "NOT FOUND!!" << endl;
         }
     }
     
@@ -129,11 +129,47 @@ public:
                     break;
                 }
             }
-        
+            cout << "Employee has been deleted*" << endl;
         }
         else {
-            cout << "NO DATA!!" << endl;
+            cout << "NOT FOUND!!" << endl;
         }
+    }
+    void sortEmployee() {
+        Employee* temp;
+        int choice;
+        do {
+            sortMenu();
+            choice = getChoice();
+            switch (choice)
+            {
+            case 1:
+                for (int i = 0; i < employees.size() - 1; i++) {
+                    for (int j = 0; j < employees.size() - i - 1; j++) {
+                        if (employees[j]->getId() > employees[j + 1]->getId()) {
+                            temp = employees[j];
+                            employees[j] = employees[j + 1];
+                            employees[j + 1] = temp;
+                        }
+                    }
+                }
+                cout << "SORT SUCESSFUL!!" << endl;
+                break;
+            case 2:
+                for (int i = 0; i < employees.size() - 1; i++) {
+                    for (int j = 0; j < employees.size() - i - 1; j++) {
+                        if (employees[j]->getName() > employees[j + 1]->getName()) {
+                            temp = employees[j];
+                            employees[j] = employees[j + 1];
+                            employees[j + 1] = temp;
+                        }
+                    }
+                }
+                cout << "SORT SUCESSFUL!!" << endl;
+                break;
+            }
+
+        } while (choice != 0);
     }
 
 
@@ -193,8 +229,16 @@ public:
         cout << "Choose (1-3): ";
     }
 
+    void sortMenu() {
+        cout << "===SORT MENU===\n";
+        cout << "1.ID\n";
+        cout << "2.NAME\n";
+        cout << "0.MAIN MENU\n";
+        cout << "Choose (1-2): ";
+    }
+
     void viewInfo() {
-        cout << "ID\tNAME\tPHONE\tSEX" << endl;
+        cout << "ID\tNAME\tSEX\tPHONE" << endl;
     }
 
     int getChoice() {
