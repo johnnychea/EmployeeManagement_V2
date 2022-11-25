@@ -3,24 +3,26 @@ Name: Chea Khen Johnny
 Project:  EMPLOYEE MANAGEMENT SYSTEM
 App Features
 1.	ADD NEW EMPLOYEE
-1.	ID
-2.	NAME
-3.	SEX
-4.	PHONR
+   1.	ID
+   2.	NAME
+   3.	SEX
+   4.	PHONR
 2.	VEIW ALL EMPLOYEE
 3.	SEARCH EMPLOYEE
-1.	By ID
+   1.	By ID
 4.	SORT EMPLOYEE
-1.	By ID
-2.	By Name
+   1.	By ID
+   2.	By Name
 5.	EDIT EMPLOYEE
-1.	By ID
+   1.	By ID
 6.	DELETE EMPLOYEE
-1.	By ID
+   1.	By ID
 7.	SAVE 
 8.	LOAD 
 0.	EXIT 
-UI DESIGN
+     
+     
+             UI DESIGN
 
 -------------------------------------
 EMPLOYEE MANAGEMENT SYSTEM
