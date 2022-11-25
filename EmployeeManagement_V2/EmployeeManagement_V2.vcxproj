@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AbstractHe.cpp" />
+    <ClCompile Include="AbstractSe.cpp" />
     <ClCompile Include="App.cpp" />
     <ClCompile Include="DynamicArray.cpp" />
     <ClCompile Include="Employee.cpp" />

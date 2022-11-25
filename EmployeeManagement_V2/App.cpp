@@ -55,15 +55,15 @@ public:
                     switch (ch)
                     {
                     case SALARIED_EMPLOYEE:
-                        sEmployee.input();
+                        sEmployee.getSemployee();
                         employeeservice.addEmployee(&sEmployee);
                         break;
                     case HOURLY_EMPLOYEE:
-                        hEmployee.input();
+                        hEmployee.getHemployee();
                         employeeservice.addEmployee(&hEmployee);
                         break;
                     }
-                    cout << "Do you want to add more?(Y/N)";
+                    cout << "  Do you want to add more?(Y/N)";
                     op = getOption();
                 } while (op != 'n' && op != 'N');
                 break;

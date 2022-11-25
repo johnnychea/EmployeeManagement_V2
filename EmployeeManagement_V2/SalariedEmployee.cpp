@@ -3,9 +3,11 @@
 #include <iostream>
 #include "Employee.cpp"
 #include "Payment.cpp"
+#include "AbstractSe.cpp"
+
 using namespace std;
 
-class SalariedEmployee : public Employee, Payment {
+class SalariedEmployee : public Employee, Payment, AbstractSe {
 private:
     double salary;
 public:
@@ -23,7 +25,7 @@ public:
         return salary;
     }
 
-    void getEmployee() {
+    void getSemployee() {
         Employee::input();
         cout << "Enter salary: ";
         cin >> salary;

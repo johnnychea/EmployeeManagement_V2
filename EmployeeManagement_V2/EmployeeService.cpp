@@ -105,7 +105,7 @@ public:
                             cout << "Enter new Phone Number: ";
                             cin >> phone;
                             (*it)->setPhone(phone);
-                            cout << "Name has been edited*" << endl;
+                            cout << "Phone Number has been edited*" << endl;
                             break;
                         }
 

@@ -2,9 +2,11 @@
 #include <iostream>
 #include "Employee.cpp"
 #include "Payment.cpp"
+#include "AbstractHe.cpp"
+
 using namespace std;
 
-class HourlyEmployee : public Employee, Payment {
+class HourlyEmployee : public Employee, Payment, AbstractHe {
 private:
     double rate;
     double hour;
